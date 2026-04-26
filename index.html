@@ -1,110 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Reece Allen Interiors</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reece Allen — Interior Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f8f6f2;
-            color: #333;
-        }
-
-        header {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-        }
-
-        .projects img {
-            width: 80%;
-            max-width: 400px;
-            margin: 15px;
-            border-radius: 10px;
-        }
-
-        .contact {
-            background: #1c1c1c;
-            color: white;
-        }
-
-        input, textarea {
-            width: 80%;
-            max-width: 400px;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 5px;
-            border: none;
-        }
-
-        button {
-            padding: 10px 20px;
-            background: #d4af37;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Reece Allen</h1>
-    <p>Interior designer based in Nairobi. I create modern, intentional spaces that feel as good as they look.</p>
-</header>
+  <!-- Nav section-->
+  <nav id="nav">
+    <a href="#" class="nav-logo">Reece Allen</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I’m an emerging interior designer focused on clean, functional and emotionally engaging spaces.
-        Every design is tailored to reflect the client’s lifestyle and personality.
-    </p>
+  <!-- Hero section-->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Nairobi, Kenya </span>
+      <h1 class="hero-title">Reece <em>Allen</em></h1>
+      <p class="hero-sub">Interior Design | Creating Intentional Spaces</p>
+      <a href="#works" class="hero-cta">View Selected Works</a>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=85"
+          alt="Elegant interior ..."
+          loading="lazy"
+        />
+        <div class="about-image-accent"></div>
+        <div class="about-image-tag">Nairobi · Kenya</div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">The Vision</span>
+        <h2>Design that<br>speaks <em>softly</em><br>and stays forever</h2>
+        <p>
+          I'm an emerging interior designer focused on clean, functional, and emotionally
+          engaging spaces. 
+        </p>
+        <p>
+          My philosophy is rooted in restraint. I believe the most powerful rooms are those
+          that feel inevitable — as if they couldn't have been any other way. Equal parts
+          architecture, texture, and story.
+        </p>
+        
+      </div>
+    </div>
+  </section>
+
+  <!--Selected Works section -->
+  <section id="works">
+    <div class="works-header reveal">
+      <div>
+        <h2>Selected <em>Works</em></h2>
+      </div>
+      <span class="works-count">3 Projects</span>
+    </div>
+    
+    <div class="works-grid">
+        <!-- Living room -->
+      <div class="work-item">
+        <img class="work-img"
+          src="./images/lr.jpg"
+          alt="Urban Loft"
+          loading="lazy"
+        />
+        <div class="work-overlay"></div>
+        
+        <div class="work-info">
+          <span class="work-num">01 — Living Room</span>
+          <div class="work-title">Modern<br>Aesthetic Living Room</div>
+          
+        </div>
+      </div>
+        <!-- Calming bedroom -->
+      <div class="work-item">
+        <img class="work-img"
+          src="./images/bedroom.jpg"
+          alt="Minimalist Kitchen"
+          loading="lazy"
+        />
+        <div class="work-overlay"></div>
+        
+        <div class="work-info">
+          <span class="work-num">02 — Bedroom</span>
+          <div class="work-title">Soft, Calming Bedroom<br>designed for relaxation</div>
+         
+        </div>
+      </div>
+        <!-- Minimal Kitchen -->
+      <div class="work-item">
+        <img class="work-img"
+          src="./images/kitchen.jpg"
+          alt="Warm Bedroom"
+          loading="lazy"
+        />
+        <div class="work-overlay"></div>
+        
+        <div class="work-info">
+          <span class="work-num">03 — Kitchen</span>
+          <div class="work-title">Minimal Kitchen focused on <br>space & functionality</div>
+          
+        </div>
+      </div>
+    
+
+    </div>
+  </section>
+
+  <!-- Contact section-->
+  <section id="contact">
+    <div class="contact-inner">
+
+        <h2 class="reveal">Start a <em>Project</em></h2>
+        <p class="reveal">Have a space you want to transform? I'd love to hear about it.</p>
+
+        <form action="https://formspree.io/f/mjgjzyqe" method="POST" class="contact-form reveal">
+          <div class="form-row">
+              <input class="form-input" type="text" name="name" placeholder="Your Name" id="name" required />
+              <input class="form-input" type="email" name="email" placeholder="Your Email" id="email" required />
+          </div>
+          
+          <textarea class="form-textarea" name="message" placeholder="Your message..." id="message" required></textarea>
+          
+          <button type="submit" class="form-btn" id="sendBtn">Send Message</button>
+        </form>
+
+        <div class="contact-info reveal">
+            <div class="contact-info-item">
+                <span class="contact-info-label">Email</span>
+                <span class="contact-info-val">reecegesicho@gmail.com</span>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-info-item">
+                <span class="contact-info-label">Phone</span>
+                <a href="tel:+254792639515" class="contact-info-val">+254 792 639 515</a>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-info-item">
+                <span class="contact-info-label">Based In</span>
+                <span class="contact-info-val">Nairobi, Kenya</span>
+            </div>
+
+                
+        </div>
+    </div>
 </section>
 
-<section class="projects">
-    <h2>Selected Works</h2>
+  <!-- Footer -->
+  <footer>
+    <span class="footer-logo">Reece Allen</span>
+    <span>© 2026 Reece Allen Interiors. All rights reserved.</span>
+    <span>Nairobi, Kenya</span>
+  </footer>
 
-    <img src="livingroom.jpg">
-    <p>Modern living room with neutral tones and layered lighting.</p>
+  <div class="toast" id="toast">Inquiry sent — I'll be in touch soon.</div>
 
-    <img src="bedroom.jpg">
-    <p>Soft, calming bedroom designed for relaxation.</p>
+  <script>
 
-    <img src="kitchen.jpg">
-    <p>Minimal kitchen focused on space and functionality.</p>
-</section>
+    // ── Nav scroll ──
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
 
-<section class="contact">
-    <h2>Start a Project</h2>
-    <p>Have a space you want to transform? Send me a message.</p>
+    // ── Intersection Observer ──
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
 
-    <form action="https://formspree.io/f/mjgjzyqe" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <br>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <br>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <br>
-        <button type="submit">Send Message</button>
-    </form>
+    document.querySelectorAll('.reveal, .about-image-wrap, .about-text, .work-item').forEach(el => observer.observe(el));
 
-    <p>Email: reecegesicho@gmail.com</p>
-    <p>Phone: +254 792639515</p>
-</section>
 
+
+    function showToast() {
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
+    }
+  </script>
 </body>
 </html>
