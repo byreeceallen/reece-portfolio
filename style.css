@@ -401,3 +401,97 @@
       z-index: 500; pointer-events: none;
     }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+/* ── Mobile Menu Toggle Styles ── */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--white);
+  transition: 0.3s;
+}
+
+/* ── Media Queries ── */
+
+/* Tablet & Smaller (1024px) */
+@media (max-width: 1024px) {
+  nav, nav.scrolled { padding: 20px 40px; }
+  #about, #works, #contact { padding: 100px 40px; }
+  
+  .about-grid { gap: 40px; }
+  .about-image-wrap img { height: 450px; }
+}
+
+/* Small Tablets & Large Phones (768px) */
+@media (max-width: 768px) {
+  /* Navigation */
+  .menu-toggle { display: flex; }
+  
+  .nav-links {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 80%; height: 100vh;
+    background: var(--dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    z-index: 999;
+  }
+
+  .nav-links.active { right: 0; }
+  
+  .menu-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+  .menu-toggle.open span:nth-child(2) { transform: rotate(-45deg) translate(5px, -6px); }
+
+  /* Hero */
+  .hero-title { font-size: 5rem; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image-accent { display: none; }
+  .about-image-tag { right: 0; }
+  
+  /* Works */
+  .works-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .works-grid { 
+    grid-template-columns: 1fr; 
+    gap: 30px; /* Space out projects on mobile */
+  }
+  .work-item:first-child, .work-item:not(:first-child) { grid-row: auto; }
+  .work-item:first-child .work-img, .work-item:not(:first-child) .work-img { height: 400px; }
+
+  /* Contact */
+  .form-row { grid-template-columns: 1fr; }
+  .contact-info { flex-direction: column; align-items: center; gap: 20px; }
+  .contact-divider { width: 40px; height: 1px; }
+  
+  #contact::before { font-size: 15rem; }
+}
+
+/* Small Phones (480px) */
+@media (max-width: 480px) {
+  nav, nav.scrolled { padding: 20px 24px; }
+  #about, #works, #contact { padding: 80px 24px; }
+  
+  .hero-title { font-size: 3.5rem; }
+  .about-text h2 { font-size: 2.5rem; }
+  
+  .work-item:first-child .work-img, .work-item:not(:first-child) .work-img { height: 320px; }
+  
+  footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 40px 24px;
+  }
+}
